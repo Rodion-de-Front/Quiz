@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body>
+
+<div class="name">Night quiz</div>
+
+<form id="form" class="test">
+
+</form>
+
+<div id="main">
+
+  <div id = "container">
+   
+  </div>
+
+  <div id="buttons">
+    <div class="add-quest" onclick="addQuestion()">
+      Add question
+    </div>
+
+    <div class="load" onclick="createQuize()">
+      Generate Quiz
+    </div>
+  </div>
+
+</div>
+
+
+<template id="creating">
+
+  <div class="created_quest">
+
+    <div class = "wel_quest">
+      <div class="category">Question № ${№}</div> <br>
+      <textarea class="text_question" type="text"></textarea>
+    </div>
+
+    <div class="answers">
+      <div class="category">Answer options</div> <br>
+      <input class="text_answer" type="text"> <br>
+      <input class="text_answer" type="text"> <br>
+      <input class="text_answer" type="text"> <br>
+    </div>
+
+    <div class="correct_answer">
+      <div class="category">Correct answer</div> <br>
+      <input class="text_correct" type="text">
+    </div>
+  
+  </div>
+
+</template>
+
+
+
+<template id="quiz">
+    <div class="card">
+      <div class="question">
+          <p>${number}. ${question}<br></p>
+          <input class="otion" name="point-${number}" type="radio" value="True">${correct_answer}<br>
+          <input class="otion" name="point-${number}" type="radio" value="False">${answer}<br>
+          <input class="otion" name="point-${number}" type="radio" value="False">${answer}<br>
+          <input class="otion" name="point-${number}" type="radio" value="False">${answer}<br>
+          <div id="result-${number}"></div>
+      </div>
+    </div>
+</template>
+
+
+</body>
+</html>
+
+    
+    <script>
+        function showResults(){
+            let i = 0;
+            let result; 
+            let count = 0;
+            let form = document.querySelector("form");
+            let data = new FormData(form);
+            for (const answer of data) {
+                result = "result-" + i;
+                i++;
+                if (answer[1] == "True") {
+                    count++;
+                    document.getElementById(result).style.overflow = "visible";
+                    document.getElementById(result).style.backgroundColor = "green";
+                    document.getElementById(result).textContent = "Сorrectly";
+                    document.getElementById(result).style.width = "90px";
+                    document.getElementById(result).style.height = "20px";
+                    document.getElementById(result).style.textAlign = "center";
+                    document.getElementById(result).style.margin = "10px";
+                }
+                else {
+                    document.getElementById(result).style.overflow = "visible";
+                    document.getElementById(result).style.backgroundColor = "red";
+                    document.getElementById(result).textContent = "Incorrectly";
+                    document.getElementById(result).style.width = "90px";
+                    document.getElementById(result).style.height = "20px";
+                    document.getElementById(result).style.textAlign = "center";
+                    document.getElementById(result).style.margin = "10px";
+                }
+            };
+            log.innerText = "Result: " + count + "/" + i;
+
+            document.getElementById('final').remove();
+        }
+    </script>

@@ -1,0 +1,205 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+}
+
+#main {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#container {
+    display: inline-block;  
+}
+
+.buttons {
+    display: block;
+}
+
+.add-quest {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 22px;
+    background: linear-gradient(45deg, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    padding-right: 50px;
+}
+
+.load {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 22px;
+    background: linear-gradient(45deg, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+}
+
+.created_quest {
+    display: inline-block;
+    margin: 50px;
+    padding-bottom: 35px;
+}
+
+.category {
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.wel_quest {
+    position: relative;
+    overflow: auto;
+    display: block;
+    margin: 20px 0 20px 0;
+}
+
+.text_question {
+    position: relative;
+    float: left;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.answers {
+    position: relative;
+    overflow: auto;
+    display: block;
+    margin: 20px 0 20px 0;
+}
+
+.answers input {
+    margin-bottom: 15px;
+}
+
+.text_answer {
+    position: relative;
+    float: left;
+    padding: 10px;
+    width: 300px;
+    outline: none;
+}
+
+.text_correct {
+  position: relative;
+  float: left;
+  padding: 10px;
+  width: 300px;
+  outline: none;
+}
+
+.correct_answer {
+    position: relative;
+    display: block;
+    overflow: auto;
+    margin: 20px 0 20px 0;
+}
+
+.name {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    display: table;
+    margin: 0px auto;  
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .card {
+    color: aliceblue;
+    display: table;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 40vw;
+    font-size: 18px;
+    border: 0.3rem solid white;
+    border-radius: 0.5rem;
+    box-shadow:
+      0 0 .5rem white,
+      inset 0 0 .5rem white,
+      0 0 2rem #0088FF,
+      inset 0 0 2rem #0088FF,
+      0 0 4rem #0088FF,
+      inset 0 0 4rem #0088FF;
+    padding: 15px;
+  }
+
+  #log {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;   
+  }
+
+  #final {
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+  }
+
+  #final:hover {
+    background-position: right center;
+  }
+
+
+
+  :root {
+    --eigengrau-light: #4830F0;
+  }
+
+  .created_quest {
+      padding: 1rem;
+      border: solid 0.15rem var(--eigengrau-light);
+      border-radius: 0.5rem;
+      padding: 20px;
+  }
+
+
+  .created_quest input, .created_quest textarea {
+    display: block;
+    background-color: black;
+    color: aliceblue;
+    font-size: 1rem;
+    border: solid 1px var(--eigengrau-light);
+    border-radius: 0.5rem;
+    padding: 0.25rem 1rem;
+    box-shadow:
+      0 0 4px 0 var(--eigengrau-light),
+      0 0 4px 0 inset var(--eigengrau-light);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  
+  .created_quest input:hover,
+  .created_quest textarea:hover {
+    box-shadow:
+      0 0 3px 1px var(--eigengrau-light),
+      0 0 3px 1px inset var(--eigengrau-light);
+  }
+  
+  .created_quest input:focus,
+  .created_quest textarea:focus {
+    outline: none;
+    box-shadow:
+      0 0 2px 2px var(--eigengrau-light),
+      0 0 2px 2px inset var(--eigengrau-light);
+  }
